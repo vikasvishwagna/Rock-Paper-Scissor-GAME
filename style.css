@@ -89,9 +89,71 @@ html, body {
   margin-top: 20px;
 }
 
-.button-container{
+.choice{
   height: 25rem;
-  width: 25rem;
+  width: 29rem;
   border: 2px solid black;
   margin-top: 2rem;
+  
+}
+
+.btn-choice{
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.rock-button{
+  border: 10px solid #0074B6;
+
+}
+
+.scissor-button{
+  margin-left: 7rem;
+  border: 10px solid #BD00FF;
+}
+
+.paper-button{
+  margin-left: 8.5rem;
+  margin-top: 3.5rem;
+  border: 10px solid #FFA943;
+}
+img{
+  mix-blend-mode: multiply;
+}
+
+.result-container{
+  height: 25rem;
+  width: 50rem;
+  border: 2px solid black;
+  margin-top: 4rem;
+  display: none;
+  justify-content: space-between;
+}
+
+.userChoice-container, .compChoice-container{
+  /* height: 23rem;
+  width: 23rem;
+  background-color: rgb(73, 127, 175);
+  gap: 1rem;
+  display: flex;
+  margin: 1rem; */
+  text-align: center;
+}
+
+.user-choice, .comp-choice{
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  margin-top: 6rem;
+  
+}
+
+.msg-container{
+  text-align: center;
+  margin-top: 6rem;
 }
