@@ -9,7 +9,8 @@ let choiceContainer = document.querySelector('.choice');
 let resultContainer = document.querySelector('.result-container');
 let resultUserChoice = document.querySelector('.user-choice');
 let resultCompChoice =  document.querySelector('.comp-choice');
-
+let playAgainBtn = document.querySelector('.play-again-btn');
+let resetBtn = document.querySelector('.reset-btn');
 
 let generateComputerChoice = ()=>{
   let arr = ["rock","paper","scissor"];
@@ -24,11 +25,11 @@ let showWinner = (userWin)=>{
   if(userWin){
     msgText.textContent = "YOU WIN";
     yourScore++;
-    yourScorePara = yourScore;
+    yourScorePara.textContent = yourScore;
   }else{
     msgText.textContent = "YOU LOSE";
     computerScore++;
-    compScorePara = computerScore;
+    compScorePara.textContent = computerScore;
   }
 }
 const playGame = (userChoice)=>{
@@ -58,6 +59,7 @@ const playGame = (userChoice)=>{
 
 }
 
+
 choices.forEach((btn)=>{
   btn.addEventListener('click',()=>{
     let userChoice = btn.getAttribute("id");
@@ -65,3 +67,9 @@ choices.forEach((btn)=>{
     playGame(userChoice);
   });
 });
+
+playAgainBtn.addEventListener('click',function(){
+  resultContainer.style.display = "none";
+  choiceContainer.style.display = "flex";
+});
+
