@@ -155,6 +155,13 @@ img{
   text-align: center;
 }
 
+.userChoice-container p, .compChoice-container p{
+  font-family: 'Roboto';
+  font-size: larger;
+  color: #FFFFFF;
+  letter-spacing: 1.5px;
+}
+
 .user-choice, .comp-choice{
   height: 10rem;
   width: 10rem;
@@ -178,16 +185,26 @@ img{
   text-align: center;
   margin-top: 6rem;
 }
-
+.msg-text{
+  font-family: 'Roboto';
+  font-size: 3rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 1.5px;
+}
 .play-again-btn{
-  height: 2.5rem;
-  width: 10rem;
+  height: 3rem;
+  width: 15rem;
   padding: 1rem 2rem 1rem 2rem;
+  margin-top: 5rem;
   border-radius:0.5rem;
   font-family: 'Roboto';
+  font-size: large;
+  letter-spacing: 1.5px;
   color: black;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
+  cursor: pointer;
 }

@@ -15,10 +15,11 @@ let resetBtn = document.querySelector('.reset-btn');
 let generateComputerChoice = ()=>{
   let arr = ["rock","paper","scissor"];
   let randomIdx = Math.floor(Math.random()*3);
+  // console.log(`compChoice:${arr[randomIdx]}`);
   return arr[randomIdx];
 }
 
-let gameDraw = ()=>{
+const gameDraw = ()=>{
   msgText.textContent = "TIE UP";
 }
 let showWinner = (userWin)=>{
@@ -41,7 +42,11 @@ const playGame = (userChoice)=>{
 
   //1.Draw condition(userChoice == compChoice).
   if(userChoice === compChoice){
+    console.log("its a tie");
+    resultContainer.style.display = "flex";
+    choiceContainer.style.display = "none";
     gameDraw();
+  
   }else{
     let userWin = true;
     if(userChoice === "rock"){
@@ -68,8 +73,21 @@ choices.forEach((btn)=>{
   });
 });
 
-playAgainBtn.addEventListener('click',function(){
+function playAgain(){
   resultContainer.style.display = "none";
   choiceContainer.style.display = "flex";
-});
+  resultCompChoice.innerHTML ="";
+  resultUserChoice.innerHTML ="";
+  msgText.textContent = "";
+}
 
+function resetFunction(){
+ playAgain();
+ yourScore = 0;
+ computerScore = 0;
+ yourScorePara.textContent = yourScore;
+ compScorePara.textContent = computerScore;
+}
+
+playAgainBtn.addEventListener('click',playAgain);
+resetBtn.addEventListener('click',resetFunction);
